@@ -1,6 +1,6 @@
 const container = document.querySelector(".container");
 const input = document.querySelector(".input-menu input");
-const createTodo = document.querySelector(".button-menu button");
+const createTodo = document.querySelector(".button-menu label");
 const todoContainer = document.querySelector(".to-do-container");
 
 createTodo.addEventListener("click", () => {

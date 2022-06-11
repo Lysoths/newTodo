@@ -13,8 +13,8 @@ createTodo.addEventListener("click", () => {
   } else {
     todoContainer.appendChild(box);
     box.classList.add("todo");
-    box.appendChild(text);
     text.innerHTML = input.value;
+    box.appendChild(text);
     input.value = "";
     const deleteBtn = document.createElement("button");
     const editBtn = document.createElement("button");
@@ -30,7 +30,7 @@ createTodo.addEventListener("click", () => {
     });
 
     editBtn.addEventListener("click", () => {
-      box.innerText = prompt(`Enter a new Todo`);
+      box.innerText = prompt(`Enter a new Todo`, `${text.innerText}`);
       box.appendChild(box2);
       box2.appendChild(deleteBtn);
       deleteBtn.classList.add("delete");

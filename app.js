@@ -6,14 +6,16 @@ const todoContainer = document.querySelector(".to-do-container");
 createTodo.addEventListener("click", () => {
   const box = document.createElement("div");
   const box2 = document.createElement("div");
+  const text = document.createElement("p");
 
   if (input.value == "") {
     alert("Please enter new todo");
   } else {
-    box.innerHTML = input.value;
-    input.value = "";
-    box.classList.add("todo");
     todoContainer.appendChild(box);
+    box.classList.add("todo");
+    box.appendChild(text);
+    text.innerHTML = input.value;
+    input.value = "";
     const deleteBtn = document.createElement("button");
     const editBtn = document.createElement("button");
     box.appendChild(box2);
